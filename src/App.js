@@ -1,21 +1,21 @@
 import "./App.css";
+import Header from "./Components/Header";
+import RestaurantList from "./Components/RestaurantList";
+import ReservationForm from "./Components/ReservationForm";
 
 function App() {
+  let restaurant = {
+    name: "Ashas",
+    img: "",
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <div className="app-content">
+        <RestaurantList />
+        <ReservationForm restaurant={restaurant} />
+      </div>
     </div>
   );
 }
